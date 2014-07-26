@@ -12,7 +12,10 @@
 "
 " When started as "evim", evim.vim will already have done these settings.
 set nocompatible " be iMproved, required
-filetype off     " required
+syntax on
+filetype on " required
+filetype indent on
+filetype plugin on
 
 "set the runtime path to include Vundle and initialize
 set rtp +=~/.vim/bundle/Vundle.vim
@@ -27,7 +30,7 @@ Plugin 'tpope/vim-rails'
 
 call vundle#end()
 filetype plugin indent on 
-
+autocmd FileType ruby compiler ruby
 
 if v:progname =~? "evim"
   finish
