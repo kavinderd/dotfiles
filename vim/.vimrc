@@ -28,7 +28,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'jgdavey/vim-turbux'
-Plugin 'wincent/Command-T'
+Plugin 'wincent/command-t'
 call vundle#end()
 filetype plugin indent on 
 autocmd FileType ruby compiler ruby
