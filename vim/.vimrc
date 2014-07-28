@@ -117,3 +117,5 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+" Vimux config
+let g:VimuxUseNearestPane = 1 " Use existing pane
