@@ -28,6 +28,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'jgdavey/vim-turbux'
+Plugin 'wincent/Command-T'
 call vundle#end()
 filetype plugin indent on 
 autocmd FileType ruby compiler ruby
@@ -123,3 +124,7 @@ set softtabstop=2
 set shiftwidth=2
 " Vimux config
 let g:VimuxUseNearestPane = 1 " Use existing pane
+" Turbux config
+let g:no_turbux_mappings = 1
+map <leader>m <Plug>SendTestToTmux
+map <leader>M <Plug>SendFocusedTestToTmux
