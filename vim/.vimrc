@@ -45,13 +45,12 @@ set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
+set noswapfile
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set nobackup		" keep a backup file (restore to previous version)
   set noundofile		" keep an undo file (undo changes after closing)
-	set noswap
 endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
