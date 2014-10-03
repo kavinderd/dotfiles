@@ -12,6 +12,7 @@
 "
 " When started as "evim", evim.vim will already have done these settings.
 set nocompatible " be iMproved, required
+set number " Line Numbers
 syntax on
 filetype on " required
 filetype indent on
@@ -30,6 +31,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-surround'
+Plugin 'rizzatti/dash.vim'
 call vundle#end()
 filetype plugin indent on 
 autocmd FileType ruby compiler ruby
@@ -38,7 +40,7 @@ if v:progname =~? "evim"
   finish
 endif
 " NERDTree config
-autocmd vimenter * NERDTree " always start NerdTree
+"autocmd vimenter * NERDTree " always start NerdTree
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -120,9 +122,11 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+" Softabs, 2 stops
 set tabstop=2
-set softtabstop=2
 set shiftwidth=2
+set shiftround
+set expandtab
 " Vimux config
 let g:VimuxUseNearestPane = 1 " Use existing pane
 " Turbux config
